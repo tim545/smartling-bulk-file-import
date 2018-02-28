@@ -1,0 +1,15 @@
+{
+  "name": "smartling-bulk-file-import",
+  "version": "1.0.0",
+  "description": "",
+  "main": "runner.js",
+  "scripts": {
+    "start": "node runner.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "glob": "7.1.2",
+    "newman": "3.9.3"
+  }
+}

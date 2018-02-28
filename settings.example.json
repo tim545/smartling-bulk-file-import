@@ -1,0 +1,13 @@
+{
+  "directory": "/path-to-files",
+  "fileType": "json",
+  "targetLocale": "xx-XX",
+  "project": "1234abcd",
+  "fileUri": "/smartling-path-to-file",
+  "translationState": "PUBLISHED",
+  "overwrite": "false",
+  "auth": {
+    "userIdentifier": "",
+    "userSecret": ""
+  }
+}

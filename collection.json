@@ -1,0 +1,93 @@
+{
+  "info": {
+    "name": "Smartling import translations",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "https://api.smartling.com/files-api/v2/projects/{{project}}/locales/{{locale}}/file/import",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{auth}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "disabled": true
+          },
+          {
+            "key": "Content-Type",
+            "value": "multipart/form-data"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "src": "{{directory}}/{{fileName}}.{{fileType}}",
+              "type": "file",
+              "description": "",
+              "enabled": true
+            },
+            {
+              "key": "fileUri",
+              "value": "{{fileUri}}/{{fileName}}.{{fileType}}",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "fileType",
+              "value": "{{fileType}}",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "translationState",
+              "value": "{{translationState}}",
+              "type": "text",
+              "description": ""
+            },
+            {
+              "key": "overwrite",
+              "value": "{{overwrite}}",
+              "type": "text",
+              "description": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://api.smartling.com/files-api/v2/projects/{{project}}/locales/{{locale}}/file/import",
+          "protocol": "https",
+          "host": [
+            "api",
+            "smartling",
+            "com"
+          ],
+          "path": [
+            "files-api",
+            "v2",
+            "projects",
+            "{{project}}",
+            "locales",
+            "{{locale}}",
+            "file",
+            "import"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    }
+  ]
+}
